@@ -2,6 +2,7 @@ const spawn = require('cross-spawn');
 
 function NpmBuild() {
     this.builtRoots = {};
+    this.builtRoots[process.cwd()] = true;
 }
 
 NpmBuild.prototype.apply = function (compiler) {
